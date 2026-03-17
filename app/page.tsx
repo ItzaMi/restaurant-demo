@@ -73,7 +73,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070"
+            src="/hero.jpg"
             alt="Restaurant interior with warm lighting"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -121,19 +121,19 @@ export default function Home() {
                 name: "Herb-Crusted Salmon", 
                 desc: "Wild-caught Atlantic salmon with seasonal vegetables and lemon beurre blanc",
                 price: "$32",
-                image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=800"
+                image: "/salmon.jpg"
               },
               { 
                 name: "Wagyu Burger", 
                 desc: "House-ground wagyu beef, aged cheddar, caramelized onions, brioche bun",
                 price: "$28",
-                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800"
+                image: "/burger.jpg"
               },
               { 
                 name: "Heirloom Tomato Salad", 
                 desc: "Locally-grown tomatoes, burrata, basil, aged balsamic, olive oil",
                 price: "$18",
-                image: "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?q=80&w=800"
+                image: "/salad.jpg"
               }
             ].map((dish, i) => (
               <div key={i} className="group cursor-pointer">
@@ -174,7 +174,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[500px] sm:h-[600px] rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200"
+                  src="/chef.jpg"
                   alt="Chef preparing food"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -278,7 +278,7 @@ export default function Home() {
       <section id="reserve" className="relative py-32 sm:py-40 px-4 sm:px-6">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070"
+            src="/ambiance.jpg"
             alt="Restaurant ambiance"
             className="absolute inset-0 w-full h-full object-cover"
           />
