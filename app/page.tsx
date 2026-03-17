@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -73,12 +72,10 @@ export default function Home() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image
+          <img
             src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070"
             alt="Restaurant interior with warm lighting"
-            fill
-            className="object-cover"
-            priority
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
         </div>
@@ -141,11 +138,10 @@ export default function Home() {
             ].map((dish, i) => (
               <div key={i} className="group cursor-pointer">
                 <div className="relative h-72 sm:h-80 rounded-2xl overflow-hidden mb-6">
-                  <Image
+                  <img
                     src={dish.image}
                     alt={dish.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
@@ -177,11 +173,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
               <div className="relative h-[500px] sm:h-[600px] rounded-2xl overflow-hidden">
-                <Image
+                <img
                   src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200"
                   alt="Chef preparing food"
-                  fill
-                  className="object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
               {/* Decorative element */}
@@ -282,11 +277,10 @@ export default function Home() {
       {/* Reservation CTA */}
       <section id="reserve" className="relative py-32 sm:py-40 px-4 sm:px-6">
         <div className="absolute inset-0">
-          <Image
+          <img
             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070"
             alt="Restaurant ambiance"
-            fill
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#2C3A2E]/80" />
         </div>
