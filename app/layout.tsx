@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Corner Bistro - Farm-to-Table Dining",
+  title: "Magnolia Kitchen - Home-Style Cooking in Austin",
   description:
-    "Experience elevated comfort food using locally sourced ingredients in the heart of Austin.",
+    "Family-owned restaurant serving scratch-made comfort food in the heart of Austin, Texas since 2004.",
 };
 
 export default function RootLayout({

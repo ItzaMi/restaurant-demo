@@ -4,19 +4,19 @@ import { useState } from 'react';
 
 const menuItems = {
   starters: [
-    { name: "Truffle Burrata", price: "$16", desc: "Creamy burrata, black truffle, grilled sourdough, wild arugula" },
-    { name: "Crispy Calamari", price: "$14", desc: "Lightly fried with smoked paprika aioli and pickled peppers" },
-    { name: "Soup du Jour", price: "$12", desc: "Chef's daily creation using the freshest seasonal ingredients" },
+    { name: "Queso & Chips", price: "$9", desc: "House-made white queso with roasted green chiles, served with warm tortilla chips" },
+    { name: "Fried Pickles", price: "$8", desc: "Beer-battered dill pickles with ranch and our tangy comeback sauce" },
+    { name: "Wings (8 pc)", price: "$12", desc: "Crispy fried wings tossed in your choice of buffalo, BBQ, or lemon pepper" },
   ],
   mains: [
-    { name: "Herb-Crusted Salmon", price: "$32", desc: "Wild-caught Atlantic salmon with seasonal vegetables and lemon beurre blanc", img: "/salmon.jpg" },
-    { name: "Wagyu Burger", price: "$28", desc: "House-ground wagyu beef, aged cheddar, caramelized onions, brioche bun", img: "/burger.jpg" },
-    { name: "Heirloom Tomato Salad", price: "$18", desc: "Locally-grown tomatoes, burrata, basil, aged balsamic, olive oil", img: "/salad.jpg" },
+    { name: "Chicken Fried Steak", price: "$16", desc: "Hand-breaded and golden fried, smothered in cream gravy with mashed potatoes and green beans", img: "/salmon.jpg" },
+    { name: "The Smash Burger", price: "$14", desc: "Double smashed patties, American cheese, pickles, grilled onions, special sauce on a toasted bun", img: "/burger.jpg" },
+    { name: "Grilled Chicken Salad", price: "$13", desc: "Chopped romaine, grilled chicken, avocado, corn, black beans, tomatoes, cilantro-lime dressing", img: "/salad.jpg" },
   ],
   desserts: [
-    { name: "Crème Brûlée", price: "$14", desc: "Classic vanilla bean custard with a caramelized sugar crust" },
-    { name: "Chocolate Fondant", price: "$16", desc: "Rich dark chocolate cake with molten center, vanilla bean ice cream" },
-    { name: "Seasonal Fruit Tart", price: "$13", desc: "Buttery pastry shell filled with pastry cream and fresh market fruits" },
+    { name: "Pecan Pie", price: "$7", desc: "Classic Texas pecan pie with a buttery, flaky crust — served warm with vanilla ice cream" },
+    { name: "Banana Pudding", price: "$6", desc: "Homemade with vanilla wafers, fresh bananas, and whipped cream" },
+    { name: "Brownie Sundae", price: "$8", desc: "Warm chocolate brownie topped with Blue Bell ice cream, hot fudge, and whipped cream" },
   ],
 };
 
@@ -24,19 +24,19 @@ const reviews = [
   {
     name: "Sarah M.",
     rating: 5,
-    text: "The best farm-to-table experience in Austin. The herb-crusted salmon was absolutely divine — you can taste the quality in every bite.",
+    text: "Best chicken fried steak in Austin, hands down. My family has been coming here every Friday for three years. The kids love it too.",
     source: "Google",
   },
   {
     name: "James R.",
     rating: 5,
-    text: "We've been coming here for years and it never disappoints. The atmosphere is warm, the staff is incredible, and the wagyu burger is life-changing.",
+    text: "Finally a place that feels like home. Great burgers, cold drinks, and the staff remembers your name. You can't beat that.",
     source: "Yelp",
   },
   {
-    name: "Elena K.",
+    name: "Maria G.",
     rating: 5,
-    text: "Had our anniversary dinner here and it was perfect. From the cocktails to the crème brûlée, every detail was thoughtful. Already booked our next visit.",
+    text: "We had my mom's birthday dinner here and they made it so special. The banana pudding alone is worth the trip. Love this place!",
     source: "Google",
   },
 ];
@@ -56,7 +56,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-warm-300/40">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 py-4">
           <a href="#" className="text-forest-900 text-xl font-serif">
-            The Corner Bistro
+            Magnolia Kitchen
           </a>
 
           <button
@@ -118,7 +118,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                Austin, Texas &middot; Est. 2004
+                Austin, Texas &middot; Family-Owned Since 2004
               </div>
               <h1 className="text-warm-800 text-5xl sm:text-6xl lg:text-7xl font-serif leading-[1.1] mb-6">
                 Good food,{' '}
@@ -126,7 +126,7 @@ export default function Home() {
                 great time.
               </h1>
               <p className="text-warm-500 text-lg sm:text-xl max-w-lg mb-10 leading-relaxed">
-                Farm-fresh ingredients, family recipes, and a seat at the table for everyone. Come as you are.
+                Home-style cooking, family recipes, and a seat at the table for everyone. Come hungry, leave happy.
               </p>
               <div className="flex gap-3 flex-wrap">
                 <a
@@ -149,7 +149,7 @@ export default function Home() {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/hero.jpg"
-                  alt="The Corner Bistro dining room"
+                  alt="Magnolia Kitchen dining room"
                   className="w-full h-[400px] sm:h-[500px] object-cover"
                 />
               </div>
@@ -196,7 +196,7 @@ export default function Home() {
       <section id="menu" className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-forest-600 text-sm font-medium mb-2">From Our Kitchen</p>
+            <p className="text-forest-600 text-sm font-medium mb-2">What We&apos;re Serving</p>
             <h2 className="text-4xl sm:text-5xl font-serif text-warm-800">
               The Menu
             </h2>
@@ -280,21 +280,21 @@ export default function Home() {
             <div>
               <p className="text-forest-400 text-sm font-medium mb-2">Our Story</p>
               <h2 className="text-4xl sm:text-5xl font-serif mb-8 leading-tight">
-                Twenty years of cooking{' '}
-                <span className="text-forest-400">with heart.</span>
+                Twenty years of feeding{' '}
+                <span className="text-forest-400">our neighbors.</span>
               </h2>
               <p className="text-white/70 text-lg leading-relaxed mb-6">
-                Since 2004, The Corner Bistro has been Austin&apos;s go-to spot for honest,
-                home-style cooking made with the best local ingredients we can find.
+                Since 2004, Magnolia Kitchen has been the place where Austin families come
+                to eat, catch up, and feel at home. No fuss, just real food made right.
               </p>
               <p className="text-white/70 text-lg leading-relaxed mb-10">
-                Our menu changes with the seasons. From grandmother&apos;s pasta recipes to
-                creative takes on American classics, every plate tells a story.
+                Everything&apos;s made from scratch, just like our grandma taught us. From our
+                famous chicken fried steak to our weekend brunch, we keep it simple and keep it good.
               </p>
               <div className="flex gap-12">
                 <div>
-                  <p className="text-4xl font-serif text-white">15</p>
-                  <p className="text-white/50 text-sm mt-1">Local Farm Partners</p>
+                  <p className="text-4xl font-serif text-white">3</p>
+                  <p className="text-white/50 text-sm mt-1">Generations Strong</p>
                 </div>
                 <div>
                   <p className="text-4xl font-serif text-white">4.8</p>
@@ -364,7 +364,7 @@ export default function Home() {
               Save your spot.
             </h2>
             <p className="text-warm-500 text-lg leading-relaxed mb-10">
-              Whether it&apos;s a date night, a family dinner, or just Tuesday — we&apos;d love to have you. Walk-ins always welcome too.
+              Whether it&apos;s a birthday, a family dinner, or just a Tuesday — we&apos;d love to have you. Walk-ins always welcome too.
             </p>
             <div className="space-y-5">
               <div className="flex items-center gap-4">
@@ -489,7 +489,7 @@ export default function Home() {
             {/* Map — wider */}
             <div className="lg:col-span-3 rounded-xl overflow-hidden shadow-md h-[400px]">
               <iframe
-                title="The Corner Bistro location"
+                title="Magnolia Kitchen location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.7252948088!2d-97.7430608!3d30.2671530!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b59f5c0e1b01%3A0x3f5cb19cd68bffc4!2sAustin%2C%20TX%2078701!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
                 className="w-full h-full border-0"
                 allowFullScreen
@@ -508,7 +508,7 @@ export default function Home() {
               <div className="bg-white rounded-xl p-6 border border-warm-300/40">
                 <p className="text-warm-400 text-sm font-medium mb-3">Contact</p>
                 <p className="text-warm-800 text-lg">(512) 555-1234</p>
-                <p className="text-forest-600 text-lg">hello@cornerbistro.com</p>
+                <p className="text-forest-600 text-lg">hello@magnoliakitchen.com</p>
               </div>
               <div className="bg-forest-900 rounded-xl p-6 text-white">
                 <p className="text-forest-400 text-sm font-medium mb-4">Hours</p>
@@ -542,7 +542,7 @@ export default function Home() {
           <div className="relative z-10 text-center text-white py-24 px-6">
             <h2 className="text-4xl sm:text-5xl font-serif mb-4">Your table is waiting.</h2>
             <p className="text-lg text-white/70 mb-10 max-w-md mx-auto">
-              Join us for a meal you&apos;ll be talking about all week.
+              Good food, good company — come on in.
             </p>
             <div className="flex gap-3 flex-wrap justify-center">
               <a
@@ -566,9 +566,9 @@ export default function Home() {
       <footer className="bg-forest-900 text-white py-16 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
           <div className="md:col-span-1">
-            <p className="text-xl font-serif mb-4">The Corner Bistro</p>
+            <p className="text-xl font-serif mb-4">Magnolia Kitchen</p>
             <p className="text-white/50 leading-relaxed text-sm mb-6">
-              Farm-to-table dining in the heart of Austin, Texas. Serving elevated comfort food since 2004.
+              Home-style cooking in the heart of Austin, Texas. Family-owned and operated since 2004.
             </p>
             <div className="flex gap-3 justify-center md:justify-start">
               <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-forest-600 flex items-center justify-center transition-colors" aria-label="Instagram">
@@ -596,7 +596,7 @@ export default function Home() {
             <p className="text-white/60">123 Main Street</p>
             <p className="text-white/60">Austin, TX 78701</p>
             <p className="text-white/60 mt-3">(512) 555-1234</p>
-            <p className="text-white/60 mt-1">hello@cornerbistro.com</p>
+            <p className="text-white/60 mt-1">hello@magnoliakitchen.com</p>
           </div>
           <div>
             <p className="text-sm uppercase tracking-wider text-white/40 mb-4">Hours</p>
@@ -612,7 +612,7 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center">
-          <p className="text-white/30 text-sm">&copy; 2026 The Corner Bistro. All rights reserved.</p>
+          <p className="text-white/30 text-sm">&copy; 2026 Magnolia Kitchen. All rights reserved.</p>
         </div>
       </footer>
     </div>
