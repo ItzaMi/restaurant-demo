@@ -1,22 +1,10 @@
 import type { Metadata } from "next";
-import { Crimson_Pro, Inter } from "next/font/google";
 import "./globals.css";
 
-const crimson = Crimson_Pro({ 
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap"
-});
-
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap"
-});
-
 export const metadata: Metadata = {
-  title: "The Corner Bistro - Farm-to-Table Dining",
-  description: "Experience elevated comfort food using locally sourced ingredients in the heart of Austin.",
+  title: "Magnolia Kitchen - Home-Style Cooking in Austin",
+  description:
+    "Family-owned restaurant serving scratch-made comfort food in the heart of Austin, Texas since 2004.",
 };
 
 export default function RootLayout({
@@ -25,7 +13,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${crimson.variable} ${inter.variable}`}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
